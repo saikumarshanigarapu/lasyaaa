@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lasya Saree Function Invitation - A beautiful celebration of tradition and elegance">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Lasya Saree Function | Grand Invitation</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,te,ta,kn,ml,mr,gu,bn,pa,ur,fr,es,de,it,ru,ja,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+        /* =========================================
+           ROOT VARIABLES & THEME SYSTEM
+           ========================================= */
+        :root {
+            --primary: #d4af37;
+            --primary-dark: #b8962e;
+            --secondary: #8b0000;
+            --accent: #ff6b8b;
+            --bg: #f8f5f0;
+            --bg-card: #ffffff;
+            --text-main: #1a1a2e;
+            --text-muted: #555566;
+            --text-light: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.25);
+            --glass: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --nav-height: 80px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius: 16px;
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --font-cursive: 'Great Vibes', cursive;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f0f13;
+            --bg-card: #1a1a24;
+            --text-main: #e8e8ef;
+            --text-muted: #a0a0b5;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --glass: rgba(20, 20, 28, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        /* =========================================
+           GLOBAL RESET & BASE STYLES
+           ========================================= */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: var(--transition);
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* =========================================
+           FALLING ANIMATIONS CONTAINER
+           ========================================= */
+        #falling-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .fall-item {
+            position: absolute;
+            top: -10%;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.9;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+            50% { box-shadow: 0 0 35px rgba(212, 175, 55, 0.6); }
+        }
+
+        /* =========================================
+           NAVIGATION BAR
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: var(--bg-card);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: var(--font-cursive);
+            font-size: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle, .mobile-menu-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-main);
+            font-size: 1.2rem;
+            padding: 8px;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover, .mobile-menu-btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: scale(1.1);
+        }
+
+        #google_translate_element {
+            display: inline-block;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: var(--nav-height);
+            right: -100%;
+            width: 280px;
+            height: calc(100vh - var(--nav-height));
+            background: var(--bg-card);
+            padding: 30px;
+            transition: 0.4s ease;
+            z-index: 999;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+        }
+
+        .mobile-menu.open {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .mobile-overlay {
+            position: fixed;
+            top: var(--nav-height);
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            z-index: 998;
+        }
+
+        .mobile-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(139, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1583939003579-730e3918a3c5?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            text-align: center;
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: slideUp 1s ease forwards;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .hero-title {
+            font-family: var(--font-cursive);
+            font-size: 6rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), #fff, var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: pulse 4s infinite alternate;
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--primary);
+            color: var(--bg);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.6);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 2s infinite;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1s ease;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-content {
+            padding: 20px;
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-text {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .family-details {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary);
+        }
+
+        .family-details h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .family-details p {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        /* =========================================
+           PHOTOS SECTION
+           ========================================= */
+        .photos-section {
+            background: linear-gradient(180deg, var(--bg) 0%, rgba(212, 175, 55, 0.05) 100%);
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+            height: 300px;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            opacity: 0;
+            transition: 0.3s;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .photo-card:hover .photo-overlay {
+            opacity: 1;
+        }
+
+        .photo-overlay span {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* =========================================
+           VIDEO SECTION
+           ========================================= */
+        .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+    background: #000;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .play-btn i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-left: 5px;
+        }
+
+        .play-btn:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #fff;
+        }
+
+        /* =========================================
+           MAP SECTION
+           ========================================= */
+        .map-wrapper {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 10px solid var(--bg-card);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+        }
+
+        .location-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            min-width: 180px;
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .info-card h4 {
+            margin-bottom: 5px;
+        }
+
+        .info-card p {
+            color: var(--text-muted);
+        }
+
+        /* =========================================
+           RELATIVES FORM SECTION
+           ========================================= */
+        .form-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(139, 0, 0, 0.05));
+        }
+
+        .form-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--glass-border);
+            border-radius: 10px;
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
+        }
+
+        /* =========================================
+           CHATBOT WIDGET
+           ========================================= */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 2000;
+        }
+
+        .chat-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10a37f, #078b6c);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .chat-toggle:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .chat-toggle i {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .chat-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4757;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            max-height: 500px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            animation: slideUp 0.3s ease;
+        }
+
+        .chat-header {
+            background: linear-gradient(90deg, #10a37f, #078b6c);
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-avatar {
+            width: 35px;
+            height: 35px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #10a37f;
+        }
+
+        .chat-info h4 {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+        }
+
+        .chat-info span {
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: var(--bg);
+            max-height: 300px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            animation: fadeIn 0.3s;
+        }
+
+        .message.bot {
+            background: #f0f2f5;
+            color: #000;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+
+        .message.user {
+            background: #dcf8c6;
+            color: #000;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        [data-theme="dark"] .message.bot {
+            background: #2a2a35;
+            color: #e8e8ef;
+        }
+
+        [data-theme="dark"] .message.user {
+            background: #078b6c;
+            color: #fff;
+        }
+
+        .chat-input-area {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            outline: none;
+        }
+
+        .chat-send {
+            background: #10a37f;
+            color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .chat-send:hover {
+            background: #078b6c;
+            transform: scale(1.1);
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        .footer {
+            background: var(--bg-card);
+            padding: 50px 0 20px;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-logo {
+            font-family: var(--font-cursive);
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: var(--bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 20px;
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 4rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 0 20px;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .photo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .photo-card {
+                height: 200px;
+            }
+            
+            .chat-window {
+                width: 300px;
+                right: 10px;
+                bottom: 85px;
+            }
+            
+            .form-card {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --font-size-base: 14px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .location-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .info-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--bg-card);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Falling Animations Container -->
+    <div id="falling-container"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Lasya's Function</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#relatives">Relatives</a></li>
+            </ul>
+            <div class="nav-controls">
+                <div id="google_translate_element"></div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#relatives">Relatives</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-subtitle">You are cordially invited to</p>
+           <marquee> <h1 class="hero-title">Lasya</h1></marquee>
+            <p class="hero-desc">A beautiful journey into womanhood. Join us as we celebrate the elegance, grace, and joy of Lasya's Saree Function.</p>
+            <a href="#about" class="hero-btn">View Details</a>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView()">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title reveal">About The Celebration</h2>
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963585/WhatsApp_Image_2026-05-05_at_7.26.33_AM_1_brcztk.jpg" style="width:100%;height:100vh;object-fit:contain;">
+                <div class="about-content reveal">
+                    <h2>A Milestone of Grace & Tradition</h2>
+                    <p class="about-text">
+                        It is with immense joy and pride that the <span class="highlight">Shree Marmala Umaadevi & Bheemesh</span> family invites you to witness and bless their first daughter's Saree Function. This sacred ceremony marks Lasya's transition into womanhood, wrapped in the timeless traditions of our heritage.
+                    </p>
+                    <div class="family-details">
+                        <h3>👑 Family Details</h3>
+                        <p><strong>Invited By:</strong> Shree Marmala Umaadevi - Bheemesh & his first daughter</p>
+                        <p><strong>Grandparents:</strong> Shreemathi Shree Marmala Bayakka - Mangayya</p>
+                        <p><strong>Contact:</strong> <a href="tel:+916281982176" style="color: var(--secondary); text-decoration: none;">+91 6281982176</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="section photos-section" id="photos">
+        <div class="container">
+            <h2 class="section-title reveal">Gallery of Memories</h2>
+            <div class="photo-grid" id="photoGrid">
+                <!-- Photos injected via JS for cleaner structure -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+   <section class="section" id="video">
+    <div class="container">
+        <h2 class="section-title reveal">Ceremony Highlights</h2>
+        <div class="video-container reveal">
+            <video id="eventVideo" style="width:100%; height:auto; object-fit:contain;" poster="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80" preload="metadata" controls>
+                <source src="https://res.cloudinary.com/dcdl7vjca/video/upload/v1778039623/WhatsApp_Video_2026-05-06_at_9.16.13_AM_mmajxt.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="play-btn" id="playBtn">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+   
+
+    <!-- Location Section -->
+    <section class="section" id="location">
+        <div class="container">
+            <h2 class="section-title reveal">Event Location</h2>
+            <div class="map-wrapper reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15100.0!2d79.48!3d19.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a33a0d5b1b1b1b1%3A0x0!2sKannepalli%2C%20Mancherial%2C%20Telangana!5e0!3m2!1sen!2sin!4v1715000000000" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="location-info reveal">
+                <div class="info-card">
+                    <i class="fas fa-home"></i>
+                    <h4>Village</h4>
+                    <p>Kannepalli</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Mandal</h4>
+                    <p>Kannepalli</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-city"></i>
+                    <h4>District</h4>
+                    <p>Mancherial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Relatives Form Section -->
+    <section class="section form-section" id="relatives">
+        <div class="container">
+            <h2 class="section-title reveal">Share Your Presence</h2>
+            <div class="form-card reveal">
+                <form id="relativesForm">
+                    <div class="form-group">
+                        <label for="name">Please enter your name</label>
+                        <input type="text" id="name" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Please enter mobile number</label>
+                        <input type="tel" id="mobile" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Please enter where are you from</label>
+                        <input type="text" id="locationInput" placeholder="City, State" required>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fab fa-whatsapp"></i> Submit & Send via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Widget -->
+    <div class="chat-widget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-avatar">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#10a37f">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                </div>
+                <div class="chat-info">
+                    <h4>Lasya Event Assistant</h4>
+                    <span>Powered by AI</span>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">Namaste! 👋 How can I assist you regarding Lasya's Saree Function?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..." autocomplete="off">
+                <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button class="chat-toggle" id="chatToggle">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge">1</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Lasya</div>
+            <p class="footer-text">Wishing you joy, prosperity, and endless blessings. Thank you for being part of our celebration.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/916281982176"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Lasya Saree Function. Crafted with ❤️ | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // =========================================
+        // LOADER & INITIALIZATION
+        // =========================================
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => loader.classList.add('hidden'), 800);
+            initAnimations();
+            initFallingElements();
+            initNavbar();
+            initChatbot();
+            initForm();
+            initVideo();
+            generatePhotos();
+        });
+
+        // =========================================
+        // SCROLL ANIMATIONS (Intersection Observer)
+        // =========================================
+        function initAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // =========================================
+        // FALLING ANIMATIONS (Hearts, Flowers, Balloons)
+        // =========================================
+        function initFallingElements() {
+            const container = document.getElementById('falling-container');
+            const symbols = ['🌸', '🎈', '❤️', '✨', '🌺', '🎀', '🪷', '💖'];
+            
+            function createFallingElement() {
+                const el = document.createElement('div');
+                el.classList.add('fall-item');
+                el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                el.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                el.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(el);
+                
+                setTimeout(() => el.remove(), 10000);
+            }
+
+            setInterval(createFallingElement, 800);
+        }
+
+        // =========================================
+        // NAVBAR FUNCTIONALITY
+        // =========================================
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('mobileOverlay');
+            const links = document.querySelectorAll('.mobile-menu a, .nav-links a');
+            const themeToggle = document.getElementById('themeToggle');
+
+            // Scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            });
+
+            // Mobile menu toggle
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                overlay.classList.toggle('open');
+            });
+
+            overlay.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                overlay.classList.remove('open');
+            });
+
+            // Close menu on link click
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    overlay.classList.remove('open');
+                });
+            });
+
+            // Dark mode toggle
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                updateThemeIcon(next);
+            });
+
+            function updateThemeIcon(theme) {
+                themeToggle.innerHTML = theme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+            }
+        }
+
+        // =========================================
+        // CHATBOT SYSTEM
+        // =========================================
+        function initChatbot() {
+            const toggle = document.getElementById('chatToggle');
+            const window_ = document.getElementById('chatWindow');
+            const input = document.getElementById('chatInput');
+            const sendBtn = document.getElementById('chatSend');
+            const messages = document.getElementById('chatMessages');
+            const badge = document.querySelector('.chat-badge');
+
+            let isOpen = false;
+
+            toggle.addEventListener('click', () => {
+                isOpen = !isOpen;
+                window_.style.display = isOpen ? 'flex' : 'none';
+                badge.style.display = isOpen ? 'none' : 'flex';
+                if (isOpen) input.focus();
+            });
+
+            function addMessage(text, isUser) {
+                const msg = document.createElement('div');
+                msg.classList.add('message', isUser ? 'user' : 'bot');
+                msg.innerText = text;
+                messages.appendChild(msg);
+                messages.scrollTop = messages.scrollHeight;
+            }
+
+            function getBotResponse(userMsg) {
+                const msg = userMsg.toLowerCase();
+                if (msg.includes('hello') || msg.includes('hi') || msg.includes('namaste')) {
+                    return "Hello! 👋 Welcome to Lasya's Saree Function page. How can I assist you today?";
+                } else if (msg.includes('time') || msg.includes('date') || msg.includes('when')) {
+                    return "The ceremony will be held on a blessed auspicious day. Please contact +91 6281982176 for exact date & time details.";
+                } else if (msg.includes('location') || msg.includes('where') || msg.includes('address')) {
+                    return "Venue: Village: Kannepalli, Mandal: Kannepalli, District: Mancherial, Telangana. Map is available below!";
+                } else if (msg.includes('dress') || msg.includes('attire') || msg.includes('wear')) {
+                    return "Traditional attire is highly encouraged! Ethnic wear, sarees, and formal dresses are perfect for the occasion.";
+                } else if (msg.includes('contact') || msg.includes('phone') || msg.includes('call')) {
+                    return "For inquiries, please call or WhatsApp us at: +91 6281982176";
+                } else {
+                    return "Thank you for your message! For specific queries, please WhatsApp +91 6281982176 or explore the sections above. 💐";
+                }
+            }
+
+            function sendMessage() {
+                const val = input.value.trim();
+                if (!val) return;
+                addMessage(val, true);
+                input.value = '';
+                
+                setTimeout(() => {
+                    addMessage(getBotResponse(val), false);
+                }, 800);
+            }
+
+            sendBtn.addEventListener('click', sendMessage);
+            input.addEventListener('keypress', e => {
+                if (e.key === 'Enter') sendMessage();
+            });
+        }
+
+        // =========================================
+        // RELATIVES FORM -> WHATSAPP
+        // =========================================
+        function initForm() {
+            const form = document.getElementById('relativesForm');
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const mobile = document.getElementById('mobile').value.trim();
+                const from = document.getElementById('locationInput').value.trim();
+
+                if (!name || !mobile || !from) {
+                    alert('Please fill all fields to continue.');
+                    return;
+                }
+
+                const message = encodeURIComponent(
+                    `🌸 *Lasya's Saree Function RSVP* 🌸\n\n` +
+                    `👤 Name: ${name}\n` +
+                    `📱 Mobile: ${mobile}\n` +
+                    `📍 From: ${from}\n\n` +
+                    `Wishing Lasya immense joy & success! ✨`
+                );
+
+                window.open(`https://wa.me/916281982176?text=${message}`, '_blank');
+                form.reset();
+            });
+        }
+
+        // =========================================
+        // VIDEO CONTROLS
+        // =========================================
+        function initVideo() {
+            const video = document.getElementById('eventVideo');
+            const playBtn = document.getElementById('playBtn');
+            const container = document.querySelector('.video-container');
+
+            playBtn.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    playBtn.style.display = 'none';
+                    container.classList.add('playing');
+                } else {
+                    video.pause();
+                    playBtn.style.display = 'flex';
+                    container.classList.remove('playing');
+                }
+            });
+
+            video.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    playBtn.style.display = 'none';
+                } else {
+                    video.pause();
+                    playBtn.style.display = 'flex';
+                }
+            });
+        }
+
+        // =========================================
+        // PHOTO GALLERY GENERATOR
+        // =========================================
+        function generatePhotos() {
+            const grid = document.getElementById('photoGrid');
+            const placeholders = [
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963584/WhatsApp_Image_2026-05-05_at_7.26.36_AM_1_hpbt29.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778034461/lasya2_ngipjw.png',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778034754/green_pttzki.png',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963589/WhatsApp_Image_2026-05-05_at_7.26.37_AM_1_pxm45u.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963582/WhatsApp_Image_2026-05-05_at_7.36.51_AM_gfbpqc.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963582/WhatsApp_Image_2026-05-05_at_7.36.52_AM_mxee6c.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963579/WhatsApp_Image_2026-05-05_at_7.36.53_AM_mld1hv.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778034750/lasya_nhwsdb.png',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963587/WhatsApp_Image_2026-05-05_at_7.26.36_AM_yaxhfi.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963587/WhatsApp_Image_2026-05-05_at_7.26.33_AM_m0a34g.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963581/WhatsApp_Image_2026-05-05_at_7.26.37_AM_fjrmxn.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1777963581/WhatsApp_Image_2026-05-05_at_7.26.36_AM_2_ukkj6z.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005207/WhatsApp_Image_2026-05-05_at_11.36.49_PM_fs5had.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005208/WhatsApp_Image_2026-05-05_at_11.28.46_PM_cdimce.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005208/WhatsApp_Image_2026-05-05_at_11.28.46_PM_1_zuka4g.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005208/WhatsApp_Image_2026-05-05_at_11.28.47_PM_hviw10.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005207/WhatsApp_Image_2026-05-05_at_11.28.47_PM_1_vpk0jj.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005209/WhatsApp_Image_2026-05-05_at_11.28.45_PM_1_rvdf7d.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005208/WhatsApp_Image_2026-05-05_at_11.38.29_PM_nlvkgz.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005209/WhatsApp_Image_2026-05-05_at_11.28.45_PM_vcihsj.jpg',
+                'https://res.cloudinary.com/dcdl7vjca/image/upload/v1778005208/WhatsApp_Image_2026-05-05_at_11.28.46_PM_cdimce.jpg',
+            ];
+
+            placeholders.forEach((url, i) => {
+                const card = document.createElement('div');
+                card.classList.add('photo-card', 'reveal');
+                card.innerHTML = `
+                    <img src="${url}?auto=format&fit=crop&w=600&q=80" alt="Lasya Event Photo ${i+1}" loading="lazy">
+                    <div class="photo-overlay"><span>Memory #${i+1}</span></div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            // Re-init animations for dynamically added elements
+            initAnimations();
+        }
+
+        // =========================================
+        // SMOOTH SCROLL POLYFILL (Fallback for older browsers)
+        // =========================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
